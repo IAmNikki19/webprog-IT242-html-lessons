@@ -21,7 +21,7 @@ body {
 
 .header {
   grid-area: header;
-  background-color: purple;
+  background-color: #7e6a94;
   text-align: center;
   color: #ffffff;
 }
@@ -43,12 +43,12 @@ body {
 .menu li {
   padding: 8px;
   margin-bottom: 7px;
-  background-color: #33b5e5;
+  background-color: purple;
   color: #ffffff;
 }
 
 .menu li:hover {
-  background-color: #0099cc;
+  background-color: purple;
 }
   
 .content {
@@ -66,8 +66,8 @@ body {
 
 .facts {
   grid-area: facts;
-  border: 1px solid #0099cc;
-  background-color: beige;
+  border: 1px solid #7e6a94;
+  background-color: #7e6a94;
   padding: 10px;
 }
 
@@ -81,7 +81,7 @@ body {
 
 .footer {
   grid-area: footer;
-  background-color: #0099cc;
+  background-color: #7e6a94;
   color: #ffffff;
   text-align: center;
 }
