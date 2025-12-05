@@ -82,7 +82,7 @@ body {
 .footer {
   grid-area: footer;
   background-color: #7e6a94;
-  color: black;
+  color: #ffffff;
   text-align: center;
 }
 
