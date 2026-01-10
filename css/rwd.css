@@ -37,7 +37,7 @@ header {
 .column h3 {
   font-size: 1.2rem;
   margin-bottom: 10px;
-  color: #a168bb;
+  color: #000000;
 }
 
 .column ul {
@@ -48,6 +48,35 @@ header {
 .column li {
   margin-bottom: 8px;
   font-family: sans-serif;
+}
+
+/* This makes the jump smooth instead of instant */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Optional: Styling the Navbar to stay at the top */
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  padding: 15px;
+  z-index: 1000;
+  border-bottom: 1px solid #ddd;
+}
+
+.navbar a {
+  margin-right: 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Adding space so the header doesn't hide under the navbar */
+.section {
+  padding-top: 80px; 
+  margin-bottom: 40px;
+  min-height: 400px; /* Gives enough room to scroll */
 }
 
 /* Top navigation bar */
