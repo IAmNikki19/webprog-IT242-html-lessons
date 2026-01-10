@@ -69,7 +69,7 @@ html {
 
 /* Navigation Bar Links */
 .navbar a {
-  color: #5dade2;               /* Light blue text color from your image */
+  color: #000000;               /* Light blue text color from your image */
   padding: 14px 10px;
   text-decoration: none;        /* Removes underline */
   font-weight: bold;
