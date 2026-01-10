@@ -79,7 +79,7 @@ html {
 
 /* Hover Effect */
 .navbar a:hover {
-  color: #5dade2;               /* Optional: turns blue when you point at it */
+  color: white;               /* Optional: turns blue when you point at it */
   background-color: #333;       
 }
 
