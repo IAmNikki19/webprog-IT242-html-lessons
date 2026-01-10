@@ -122,4 +122,45 @@ footer {
   padding: 20px;
   text-align: center;
   background: #ddd;
+
+}
+
+/* This makes the containers sit side-by-side */
+.gallery-row {
+  display: flex;
+  justify-content: center; /* Centers the gallery on the page */
+  gap: 20px;               /* Adds space between the two images */
+  flex-wrap: wrap;         /* Allows them to stack on small mobile screens */
+  padding: 20px;
+}
+
+/* Individual Image Box */
+.image-container {
+  width: 300px;            /* Set a consistent width */
+  border: 1px solid #ddd;
+  text-align: center;
+  background-color: white;
+}
+
+.gallery-image {
+  width: 100%;             /* Makes image fill the container */
+  height: 300px;
+  object-fit: cover;       /* Prevents stretching */
+  display: block;
+}
+
+/* The Pink Caption Bar from your reference */
+.caption-bar {
+  background-color: #8e7cc3; 
+  padding: 10px;
+  font-size: 14px;
+  min-height: 50px;         /* Keeps bars even height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.caption-bar p {
+  margin: 0;
+  color: #333;
 }
