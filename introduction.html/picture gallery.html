@@ -1,72 +1,29 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>My first Vue page</title>
-  <style>
-    #app > div {
-      border: solid black 1px;
-      width: 80%;
-      padding: 10px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-    }
-
-    figure {
-      width: 80px;
-      padding: 10px;
-      margin: 10px;
-      background-color: lightskyblue;
-      border-radius: 5px;
-    }
-
-    figcaption {
-      text-align: center;
-    }
-    
-    img {
-      width: 100%;
-    }
-  </style>
-</head>
-<body>
-
-<h1>Example 'v-for' to create images and text</h1>
-<p>The 'v-for' directive is used to create images and text based on the 'manyFoods' array in the Vue instance.</p>
-
 <div id="app">
-  <div>
-    <figure v-for="x in manyFoods">
-      <img v-bind:src="x.url">
-      <figcaption>{{ x.name }}</figcaption>
-    </figure>
+  <div class="gallery-container">
+    <h1 class="gallery-title">Nikki's Picture Gallery</h1>
+
+    <div class="main-display">
+      <button class="nav-btn prev" @click="prevImage">&#10094;</button>
+      
+      <div class="image-wrapper">
+        <img :src="images[currentIndex].url" class="active-image">
+        <img src="https://github.com/IAmNikki19/webprog-IT242-html-lessons/blob/feature/2_LNDR_customize_my_website/css/Skating.jpg?raw=true" 
+     alt="Skating" class="picture gallery-image" width="200" height="200">
+        <div class="caption-bar">
+          {{ images[currentIndex].I learned how to skate in Ayala Malls By The Bay }}
+        </div>
+      </div>
+
+      <button class="nav-btn next" @click="nextImage">&#10095;</button>
+    </div>
+
+    <div class="thumbnail-row">
+      <img v-for="(img, index) in images" 
+           :key="index" 
+           :src="img.url" 
+           :class="{ 'thumb-active': index === currentIndex }"
+           @click="currentIndex = index"
+           class="thumbnail">
+    </div>
   </div>
-  
-
 </div>
-
-<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-
-<script>
-  const app = Vue.createApp({
-   data() {
-    return {
-      manyFoods: [
-        {name: 'Burrito', url: 'img_burrito.svg'},
-        {name: 'Salad', url: 'img_salad.svg'},
-        {name: 'Cake', url: 'img_cake.svg'},
-        {name: 'Soup', url: 'img_soup.svg'},
-        {name: 'Fish', url: 'img_fish.svg'},
-        {name: 'Pizza', url: 'img_pizza.svg'},
-        {name: 'Rice', url: 'img_rice.svg'}
-      ]
-    }
-   }
-  })
-  
-  app.mount('#app')
-
-</script>
-
-</body>
-</html>
