@@ -117,9 +117,20 @@ html {
   padding: 20px;
 }
 
-/* Footer */
-footer {
-  padding: 20px;
+.site-footer {
+  background-color: #222;       /* Dark background matching your navbar */
+  color: #ffffff;               /* White text */
+  padding: 20px 0;
+  width: 100%;
+  border-top: 5px solid #8e44ad; /* Purple accent line seen in your header */
   text-align: center;
-  background: #ddd;
+  font-family: Arial, sans-serif;
+  clear: both;                  /* Ensures it pushes below your 'About Me' section */
+  margin-top: 50px;             /* Adds space between your content and the footer */
+}
+
+.footer-content p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
 }
