@@ -62,25 +62,25 @@ html {
   z-index: 1000;
   display: flex;                /* Aligns items horizontally */
   background-color: #222;       /* Dark background */
-  padding: 5px 20px;            /* Vertical and horizontal padding */
+  padding: 5px 20px;            
   border-top: 5px solid #8e44ad; /* The purple border from your image */
-  gap: 20px;                    /* Space between links */
+  gap: 20px;                    
 }
 
 /* Navigation Bar Links */
 .navbar a {
-  color: #ffffff;               
+  color: white;                 /* CHANGED: Text is now white */
   padding: 14px 10px;
-  text-decoration: none;        /* Removes underline */
+  text-decoration: none;        
   font-weight: bold;
   font-family: Arial, sans-serif;
-  transition: 0.3s;             /* Makes the hover effect smooth */
+  transition: 0.3s;             
 }
 
 /* Hover Effect */
 .navbar a:hover {
-  color: white;                 /* Turns white when you point at it */
-  background-color: #333;       /* Slightly lighter dark background on hover */
+  color: #5dade2;               /* Optional: turns blue when you point at it */
+  background-color: #333;       
 }
 
 /* Section Spacing (Keep this as is) */
