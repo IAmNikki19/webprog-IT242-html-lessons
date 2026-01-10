@@ -1,35 +1,44 @@
 <div id="app">
-  <div class="gallery-container">
-    <h1 class="gallery-title">Nikki's Picture Gallery</h1>
+  <div class="gallery-wrapper">
+    <div class="gallery-header">
+      <h1 class="gallery-title">Nikki's Picture Gallery</h1>
+    </div>
 
-    <div class="main-display">
-      <button class="nav-btn prev" @click="prevImage">&#10094;</button>
-      
-      <div class="image-wrapper">
-        <img :src="images[currentIndex].url" class="active-image">
+    <div class="main-slider">
+      <button class="arrow-btn" @click="prevImage">&#10094;</button>
+
+      <div class="image-container">
         <img src="https://github.com/IAmNikki19/webprog-IT242-html-lessons/blob/feature/2_LNDR_customize_my_website/css/Skating.jpg?raw=true" 
      alt="Skating" class="picture gallery-image" width="200" height="200">
         <div class="caption-bar">
-          {{ images[currentIndex].I learned how to skate in Ayala Malls By The Bay }}
-          
-          <img src="https://github.com/IAmNikki19/webprog-IT242-html-lessons/blob/feature/2_LNDR_customize_my_website/css/First%20Concert.jpg?raw=true" 
-     alt="First Concert" class="picture gallery-image" width="200" height="200">
-        <div class="caption-bar">
-          {{ images[currentIndex].I attended Enhypen's FATE World Tour last February 2023 }}
+          {{ currentIndex + 1 }} / {{ images.length }} - {{ images[currentIndex].caption }}
+          <p>I learned how to skate in Ayala Malls By The Bay</p>
         </div>
       </div>
 
-      <button class="nav-btn next" @click="nextImage">&#10095;</button>
+       <div class="image-container">
+        <img src="https://github.com/IAmNikki19/webprog-IT242-html-lessons/blob/feature/2_LNDR_customize_my_website/css/First%20Concert.jpg?raw=true" 
+     alt="Skating" class="picture gallery-image" width="200" height="200">
+        <div class="caption-bar">
+          {{ currentIndex + 1 }} / {{ images.length }} - {{ images[currentIndex].caption }}
+          <p>I attended Enhypen's FATE World Tour last February 2023</p>
+        </div>
+      </div>
+
+      <button class="arrow-btn" @click="nextImage">&#10095;</button>
     </div>
 
-    <div class="thumbnail-row">
+    <div class="thumbnails">
       <img v-for="(img, index) in images" 
            :key="index" 
            :src="img.url" 
-           :class="{ 'thumb-active': index === currentIndex }"
            @click="currentIndex = index"
-           class="thumbnail">
+           :class="{ 'active-thumb': index === currentIndex }"
+           class="thumb">
     </div>
+  </div>
+</div>
   </div>
 
 </div>
+
