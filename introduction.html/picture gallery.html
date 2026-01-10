@@ -28,21 +28,23 @@
       <h1 class="gallery-title">Nikki's Picture Gallery</h1>
     </div>
 
-      <div class="image-container">
-        <img src="https://github.com/IAmNikki19/webprog-IT242-html-lessons/blob/feature/2_LNDR_customize_my_website/css/Skating.jpg?raw=true" 
-     alt="Skating" class="picture gallery-image" width="200" height="200">
-        <div class="caption-bar">
-          <p>I learned how to skate in Ayala Malls By The Bay</p>
-        </div>
-      </div>
+      <div class="gallery-row">
 
-       <div class="image-container">
-        <img src="https://github.com/IAmNikki19/webprog-IT242-html-lessons/blob/feature/2_LNDR_customize_my_website/css/First%20Concert.jpg?raw=true" 
-     alt="Skating" class="picture gallery-image" width="200" height="200">
-        <div class="caption-bar">
-          <p>I attended Enhypen's FATE World Tour last February 2023</p>
-        </div>
-      </div>
+  <div class="image-container">
+    <img src="https://github.com/IAmNikki19/webprog-IT242-html-lessons/blob/feature/2_LNDR_customize_my_website/css/Skating.jpg?raw=true" 
+         alt="Skating" class="gallery-image" width="300" height="300">
+    <div class="caption-bar">
+      <p>I learned how to skate in Ayala Malls By The Bay</p>
+    </div>
+  </div>
+
+  <div class="image-container">
+    <img src="https://github.com/IAmNikki19/webprog-IT242-html-lessons/blob/feature/2_LNDR_customize_my_website/css/First%20Concert.jpg?raw=true" 
+         alt="Concert" class="gallery-image" width="300" height="300">
+    <div class="caption-bar">
+      <p>I attended Enhypen's FATE World Tour last February 2023</p>
+    </div>
+  </div>
 
     <div class="thumbnails">
       <img v-for="(img, index) in images" 
@@ -57,6 +59,7 @@
   </div>
 
 </div>
+
 
 
 
