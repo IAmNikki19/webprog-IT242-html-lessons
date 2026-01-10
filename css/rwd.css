@@ -16,6 +16,40 @@ header {
   color: white;
 }
 
+.profile-layout {
+  display: flex;         /* This puts the image and text side-by-side */
+  align-items: center;   /* Centers the image vertically with the text */
+  gap: 40px;             /* Adds space between the image and the first column */
+  padding: 20px;
+}
+
+.profile-pic {
+  width: 250px;          /* Adjust size to match the second image */
+  height: auto;
+  border-radius: 10px;   /* Optional: adds slightly rounded corners */
+}
+
+.info-columns {
+  display: flex;         /* This creates the columns for the text */
+  gap: 30px;             /* Space between "About Me" and "Education" */
+}
+
+.column h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #a168bb;
+}
+
+.column ul {
+  list-style-type: disc; /* Adds the bullet points seen in the example */
+  padding-left: 20px;
+}
+
+.column li {
+  margin-bottom: 8px;
+  font-family: sans-serif;
+}
+
 /* Top navigation bar */
 .navbar {
   display: flex;
@@ -63,9 +97,3 @@ header {
   padding: 20px;
 }
 
-/* Footer */
-footer {
-  padding: 20px;
-  text-align: center;
-  background: #ddd;
-}
